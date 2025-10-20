@@ -1,1 +1,51 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+$primary_font: 'Inter', sans-serif;
+
+$black100: #000000;
+$black80: #010101;
+
+$white90: #F1F1F1;
+$white100: #FFFFFF;
+
+$yellow100: #d4af37;
+$yellow50: #f6edcf;
+$yellow20: #fffdf5;
+
+$breakpoints: (
+  xs: 480px,
+  sm: 640px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px,
+  xxl: 1536px
+);
+
+@mixin respond($size) {
+  @media (max-width: map-get($breakpoints, $size)) {
+    @content;
+  }
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: $white90;
+    button {
+        border-style: none;
+        font-weight: bold;
+        font-family: $primary_font;
+    }
+}
+
+html {
+    padding: 0;
+}
+
+body {
+    background-color: $white90;
+    font-family: $primary_font;
+    color: $black80;
+}
