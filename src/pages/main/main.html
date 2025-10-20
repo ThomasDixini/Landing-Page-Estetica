@@ -1,0 +1,50 @@
+<main>
+    <section id="about">
+        <h2>Sobre mim</h2>
+        <div>
+            <img src="" alt="Foto da profissional">
+            <div>
+                <h3>Yasmim Faria</h3>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima consequatur vel expedita, ut nemo necessitatibus voluptate quasi quos 
+                    voluptatem atque sunt, soluta sed. 
+                    Possimus, error vero laboriosam dolorem voluptate veniam?
+                </p>
+                <button>Conheça minha história</button>
+            </div>
+        </div>
+    </section>
+    <section id="services">
+        <h2>Meus Serviços</h2>
+        <p-carousel [value]="services" [numVisible]="3" [numScroll]="3" [circular]="true" >
+            <ng-template let-service #item>
+                <article class="card">
+                    <div class="card_image">
+                        <!-- <i class={{ service.icon }}></i> -->
+                    </div>
+                    <strong>{{ service.title }}</strong>
+                    <p>{{ service.description }}</p>
+                    <p>Saiba Mais</p>
+                </article>
+            </ng-template>
+        </p-carousel>
+    </section>
+    <section id="portfolio">
+        <h2>Antes e Depois</h2>
+        <p-carousel [value]="results" [numVisible]="3" [numScroll]="3" [circular]="true" >
+            <ng-template let-result #item>
+                <article class="card">
+                    <div class="card_image">
+                        <!-- <i class={{ result.icon }}></i> -->
+                    </div>
+                    <strong>{{ result.title }}</strong>
+                    <p>{{ result.description }}</p>
+                    <p>Saiba Mais</p>
+                </article>
+            </ng-template>
+        </p-carousel>
+    </section>
+    <section id="contact">
+
+    </section>
+</main>
