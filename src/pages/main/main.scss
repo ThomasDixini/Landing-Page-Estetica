@@ -15,6 +15,36 @@ main {
         font-family: 'Playfair Display', serif;
     }
 
+    .gradient {
+        background: linear-gradient(to bottom, $yellow100, transparent);
+        width: 95%;
+        height: 1000px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 32px;
+
+        h1 {
+            font-size: 6rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        p {
+           font-size: 1.5rem; 
+           text-align: center;
+        }
+
+        button {
+            padding: 16px 32px;
+            background-color: $yellow50;
+            border-radius: 32px;
+            color: $yellow100;
+            margin-top: 2rem;
+            font-size: 1.5rem;
+        }
+    }
+
     .about {
         max-width: 1200px;
         display: flex;
