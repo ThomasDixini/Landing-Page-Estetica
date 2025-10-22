@@ -12,36 +12,46 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 export class Main {
   public services = [
     {
-      icon: '',
+      icon: 'fa-solid fa-spa',
       title: 'Limpeza de pele',
-      description: 'Alguma breve descrição so para testar como vai ficar na pagina'
+      description: 'Revigore sua pele com uma limpeza que remove impurezas e promove frescor e maciez.'
     },
     {
-      icon: '',
-      title: 'Limpeza de pele',
-      description: 'Alguma breve descrição so para testar como vai ficar na pagina'
+      icon: 'fa-solid fa-fire',
+      title: 'Ventosaterapia',
+      description: 'Ative a circulação e alivie tensões musculares com uma técnica natural e relaxante.'
     },
     {
-      icon: '',
-      title: 'Limpeza de pele',
-      description: 'Alguma breve descrição so para testar como vai ficar na pagina'
+      icon: 'fa-solid fa-droplet',
+      title: 'Drenagem Linfática',
+      description: 'Elimine toxinas e reduza inchaços, melhorando o bem-estar e a sensação de leveza.'
+    },
+    {
+      icon: 'fa-solid fa-pen',
+      title: 'Design de Sobrancelhas',
+      description: 'Realce sua beleza com sobrancelhas perfeitamente definidas e harmoniosas.'
     },
   ]
 
   public results = [
     {
-      icon: '',
+      image: 'images/pele/pele2.jpeg',
       title: 'Limpeza de Pele',
       description: 'Procedimento facial'
     },
     {
-      icon: '',
-      title: 'Limpeza de Pele',
-      description: 'Procedimento facial'
+      image: 'images/drenagem/drenagem4.jpeg',
+      title: 'Drenagem Linfática',
+      description: 'Procedimento corporal'
     },
     {
-      icon: '',
-      title: 'Limpeza de Pele',
+      image: 'images/ventosa/ventosa1.jpeg',
+      title: 'Ventosaterapia',
+      description: 'Procedimento corporal'
+    },
+    {
+      image: 'images/sobrancelha/sobrancelha2.jpeg',
+      title: 'Design de Sobrancelhas',
       description: 'Procedimento facial'
     },
   ]

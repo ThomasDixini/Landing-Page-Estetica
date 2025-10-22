@@ -6,9 +6,14 @@
             <div>
                 <h3>Yasmim Faria - Esteticista</h3>
                 <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima consequatur vel expedita, ut nemo necessitatibus voluptate quasi quos 
-                    voluptatem atque sunt, soluta sed. 
-                    Possimus, error vero laboriosam dolorem voluptate veniam?
+                    Sou graduada em Estética e Cosmetologia pelo Grupo Unis e
+                    pós graduada em injetáveis. Sou apaixonada por proporcionar
+                    bem-estar e autoestima por meio dos meus atendimentos.
+                    Com técnicas atualizadas ofereço serviços que aliam beleza e
+                    saúde, garantindo resultados eficazes e um momento único de
+                    cuidado e relaxamento.
+                    Meu objetivo é transformar o seu dia com tratamentos que
+                    valorizam sua beleza natural e promovem equilíbrio para o corpo e a mente.
                 </p>
                 <button>Conheça minha história</button>
             </div>
@@ -16,25 +21,27 @@
     </section>
     <section id="services" class="services">
         <h2>Meus Serviços</h2>
-        <p-carousel [value]="services" [numVisible]="3" [numScroll]="3" [circular]="true" >
-            <ng-template let-service pTemplate="item">
-                <article class="card">
-                    <div class="card_image">
-                        <i class="fa-solid fa-face-smile"></i>
-                    </div>
-                    <strong>{{ service.title }}</strong>
-                    <p>{{ service.description }}</p>
-                    <p>Saiba Mais</p>
-                </article>
-            </ng-template>
-        </p-carousel>
+        <div>
+            <p-carousel [value]="services" [numVisible]="3" [numScroll]="3" [circular]="true" >
+                <ng-template let-service pTemplate="item">
+                    <article class="card">
+                        <div class="card_image">
+                            <i [className]="service.icon"></i>
+                        </div>
+                        <strong>{{ service.title }}</strong>
+                        <p>{{ service.description }}</p>
+                        <p>Saiba Mais</p>
+                    </article>
+                </ng-template>
+            </p-carousel>
+        </div>
     </section>
     <section id="portfolio" class="portfolio">
         <h2>Antes e Depois</h2>
         <p-carousel [value]="results" [numVisible]="3" [numScroll]="3" [circular]="true" >
             <ng-template let-result #item>
                 <article class="card">
-                    <img src="images/foto_perfil.jpeg" alt="Foto da profissional">
+                    <img [src]="result.image" alt="Foto da profissional">
                     <strong>{{ result.title }}</strong>
                     <p>{{ result.description }}</p>
                 </article>
@@ -59,6 +66,11 @@
         </p-carousel>
     </section>
     <section id="contact" class="contact">
-
+        <h2>Agende seu Horário</h2>
+        <p>Clique no botão abaixo para iniciar uma conversa no WhatsApp e agendar seu horário. É rápido e fácil!</p>
+        <button>
+            <i class="fa-regular fa-comment"></i>
+            <span>Conversar no WhatsApp</span>
+        </button>
     </section>
 </main>
