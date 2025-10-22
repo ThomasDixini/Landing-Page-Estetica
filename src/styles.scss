@@ -5,6 +5,7 @@ $primary_font: 'Inter', sans-serif;
 
 $black100: #000000;
 $black80: #010101;
+$black10: #00000040;
 
 $white90: #F1F1F1;
 $white100: #FFFFFF;
@@ -32,7 +33,6 @@ $breakpoints: (
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: $white90;
     button {
         border-style: none;
         font-weight: bold;

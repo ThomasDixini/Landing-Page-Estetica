@@ -1,0 +1,22 @@
+footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+
+    div {
+        display: flex;
+        gap: 2rem;
+        
+        i {
+            font-size: 2rem;
+        }
+    }
+}

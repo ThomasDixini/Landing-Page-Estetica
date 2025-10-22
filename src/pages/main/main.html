@@ -1,10 +1,10 @@
 <main>
-    <section id="about">
+    <section id="about" class="about">
         <h2>Sobre mim</h2>
-        <div>
-            <img src="" alt="Foto da profissional">
+        <div class="about_content">
+            <img src="images/professional_avatar.jpeg" alt="Foto da profissional">
             <div>
-                <h3>Yasmim Faria</h3>
+                <h3>Yasmim Faria - Esteticista</h3>
                 <p>
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima consequatur vel expedita, ut nemo necessitatibus voluptate quasi quos 
                     voluptatem atque sunt, soluta sed. 
@@ -14,13 +14,13 @@
             </div>
         </div>
     </section>
-    <section id="services">
+    <section id="services" class="services">
         <h2>Meus Serviços</h2>
         <p-carousel [value]="services" [numVisible]="3" [numScroll]="3" [circular]="true" >
-            <ng-template let-service #item>
+            <ng-template let-service pTemplate="item">
                 <article class="card">
                     <div class="card_image">
-                        <!-- <i class={{ service.icon }}></i> -->
+                        <i class="fa-solid fa-face-smile"></i>
                     </div>
                     <strong>{{ service.title }}</strong>
                     <p>{{ service.description }}</p>
@@ -29,22 +29,36 @@
             </ng-template>
         </p-carousel>
     </section>
-    <section id="portfolio">
+    <section id="portfolio" class="portfolio">
         <h2>Antes e Depois</h2>
         <p-carousel [value]="results" [numVisible]="3" [numScroll]="3" [circular]="true" >
             <ng-template let-result #item>
                 <article class="card">
-                    <div class="card_image">
-                        <!-- <i class={{ result.icon }}></i> -->
-                    </div>
+                    <img src="images/foto_perfil.jpeg" alt="Foto da profissional">
                     <strong>{{ result.title }}</strong>
                     <p>{{ result.description }}</p>
-                    <p>Saiba Mais</p>
                 </article>
             </ng-template>
         </p-carousel>
     </section>
-    <section id="contact">
+    <section id="testimonials" class="testimonials">
+        <h2>Depoimentos</h2>
+        <p-carousel [value]="testmonials" [numVisible]="3" [numScroll]="3" [circular]="true" >
+            <ng-template let-testmonial #item>
+                <article class="card">
+                    <p>{{ testmonial.description }}</p>
+                    <div class="customer">
+                        <img src="images/foto_perfil.jpeg" alt="Foto da profissional">
+                        <div>
+                            <strong>{{ testmonial.name }}</strong>
+                            <p>{{ testmonial.procedure }}</p>
+                        </div>
+                    </div>
+                </article>
+            </ng-template>
+        </p-carousel>
+    </section>
+    <section id="contact" class="contact">
 
     </section>
 </main>
