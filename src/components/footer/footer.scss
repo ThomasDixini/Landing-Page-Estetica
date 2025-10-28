@@ -1,3 +1,5 @@
+@import '../../styles.scss';
+
 footer {
     position: relative;
     bottom: 0;
@@ -9,6 +11,14 @@ footer {
     align-items: center;
     gap: 0.5rem;
     padding: 1rem;
+
+    p {
+        text-align: center;
+
+        @include respond(xs){
+            font-size: 0.8rem;
+        }
+    }
 
     div {
         display: flex;

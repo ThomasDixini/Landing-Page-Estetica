@@ -8,6 +8,7 @@ main {
     gap: 10rem;
     width: 100%;
     margin: 2.5rem auto;
+    padding: 2rem;
 
     h2 {
         margin-bottom: 1.5rem;
@@ -24,15 +25,42 @@ main {
         align-items: center;
         flex-direction: column;
         border-radius: 32px;
+        padding: 1rem;
+
+        @include respond(lg){
+            height: 800px;
+        }
+        @include respond(sm){
+            height: 600px;
+        }
 
         h1 {
-            font-size: 6rem;
+            font-size: 4.5rem;
             font-family: 'Playfair Display', serif;
+            text-align: center;
+
+            @include respond(lg){
+                font-size: 3.5rem;
+            }
+            @include respond(sm){
+                font-size: 2.5rem;
+            }
+            @include respond(xs){
+                font-size: 2rem;
+            }
         }
 
         p {
            font-size: 1.5rem; 
            text-align: center;
+
+           @include respond(lg){
+                font-size: 1.25rem;
+            }
+
+            @include respond(xs){
+                font-size: 1rem;
+            }
         }
 
         button {
@@ -46,7 +74,6 @@ main {
     }
 
     .about {
-        max-width: 1200px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -54,6 +81,11 @@ main {
         .about_content {
             display: flex;
             gap: 5rem;
+
+            @include respond(lg){
+                flex-direction: column;
+                align-items: center;
+            }
 
             img {
                 max-width: 400px;
@@ -77,6 +109,10 @@ main {
                     text-align: left;
                     font-size: 1.5rem;
                     line-height: 1.4;
+
+                    @include respond(sm){
+                        font-size: 1.2rem;
+                    }
                 }
 
                 button {
@@ -93,9 +129,35 @@ main {
         flex-direction: column;
         align-items: center;
 
+        h2 {
+            @include respond(xxs){
+                font-size: 2.5rem;
+            }
+        }
+
         div {
-            max-width: 1400px;
+            max-width: 1200px;
             width: 100%;
+
+            @include respond(xl){
+                max-width: 1000px;
+            }
+
+            @include respond(lg){
+                max-width: 800px;
+            }
+
+            @include respond(md){
+                max-width: 600px;
+            }
+
+            @include respond(sm){
+                max-width: 400px;
+            }
+
+            @include respond(xxs){
+                max-width: 300px;
+            }
 
             .card {
                 background-color: white;
@@ -127,6 +189,7 @@ main {
                 strong {
                     font-size: 1.2rem;
                     font-family: 'Playfair Display', serif;
+                    text-align: center;
                 }
 
                 p {
@@ -155,28 +218,67 @@ main {
     .portfolio {
         display: flex;
         flex-direction: column;
-        align-items: center;    
+        align-items: center; 
 
-        .card {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            margin: 1rem;
+        h2 {
+            @include respond(xxs){
+                font-size: 2.5rem;
+            }
+        }
 
-            img {
-                height: 500px;
-                width: 100%;
-                border-radius: 32px;
+        div {
+            max-width: 1200px;
+            width: 100%;
+
+            @include respond(xl){
+                max-width: 1000px;
             }
 
-            strong {
-                margin-top: 1rem;
-                font-size: 1.5rem;
-                text-align: left;
+            @include respond(lg){
+                max-width: 800px;
             }
 
-            p {
-                font-size: 1rem;
+            @include respond(md){
+                max-width: 600px;
+            }
+
+            @include respond(sm){
+                max-width: 400px;
+            }
+
+            @include respond(xxs){
+                max-width: 300px;
+            }
+
+            .card {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                margin: 1rem;
+
+                img {
+                    height: 400px;
+                    width: 100%;
+                    border-radius: 32px;
+
+                    @include respond(xxs){
+                        height: 300px;
+                    }
+                }
+
+                strong {
+                    margin-top: 1rem;
+                    font-size: 1.5rem;
+                    text-align: left;
+
+                    @include respond(xxs){
+                        font-size: 1rem;
+                    }
+                }
+
+                p {
+                    font-size: 1rem;
+                }
             }
         }
     }
@@ -186,27 +288,83 @@ main {
         flex-direction: column;
         align-items: center;
 
-        .card {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 1rem;
-            padding: 1.5rem;
-            max-width: 400px;
+        h2 {
+            @include respond(xxs){
+                font-size: 2.5rem;
+            }
+        }
+
+        div {
+            max-width: 1200px;
             width: 100%;
-            background-color: white;
-            border-radius: 32px;
-            box-shadow: 0 10px 10px $black10;
-            margin: 1rem;
 
-            .customer {
+            @include respond(xl){
+                max-width: 1000px;
+            }
+
+            @include respond(lg){
+                max-width: 800px;
+            }
+
+            @include respond(md){
+                max-width: 600px;
+            }
+
+            @include respond(sm){
+                max-width: 400px;
+            }
+
+            @include respond(xxs){
+                max-width: 300px;
+            }
+
+            .card {
                 display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: space-around;
                 gap: 1rem;
+                padding: 1.5rem;
+                background-color: white;
+                border-radius: 32px;
+                box-shadow: 0 10px 10px $black10;
+                margin: 1rem;
+                height: 200px;
 
-                img {
-                    width: 50px;
-                    height: 50px;
-                    border-radius: 50%;
+                p {
+                    @include respond(xxs){
+                        font-size: 0.8rem;
+                        text-align: center;
+                    } 
+                }
+
+                .customer {
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+
+                    strong {
+                        @include respond(xxs){
+                            font-size: 0.7rem;
+                        }
+                    }
+
+                    p {
+                        @include respond(xxs){
+                            font-size: 0.6rem;
+                        } 
+                    }
+
+                    img {
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+
+                        @include respond(xxs){
+                            width: 35px;
+                            height: 35px;
+                        }
+                    }
                 }
             }
         }
@@ -218,11 +376,25 @@ main {
         align-items: center;
         justify-content: center;
 
+        h2 {
+            @include respond(xs){
+                font-size: 2rem;
+            }
+        }
+
         p {
             text-align: center;
             line-height: 1.4;
             font-size: 1.5rem;
             max-width: 600px;
+
+            @include respond(sm){
+                font-size: 1.2rem;
+            }
+
+            @include respond(xs){
+                font-size: 1rem;
+            }
         }
 
         button {
@@ -239,6 +411,11 @@ main {
             box-shadow: 0 10px 10px $black10;
             cursor: pointer;
             transition: all 0.2s;
+
+            @include respond(xs){
+                font-size: 1rem;
+                padding: 8px 16px;
+            }
         }
 
         button:hover {

@@ -17,6 +17,19 @@ header {
     border-radius: 16px;                 
     box-shadow: 0 4px 30px rgba(0,0,0,0.1);
 
+    @include respond(xs) {
+        font-size: 1.25rem;
+    }
+    @include respond(xxs) {
+        font-size: 1rem;
+    }
+
+    .logo {
+        @include respond(lg){
+            display: none;
+        }
+    }
+
     ul {
         display: flex;
         gap: 1.5rem;

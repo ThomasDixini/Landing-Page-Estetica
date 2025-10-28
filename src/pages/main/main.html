@@ -28,7 +28,7 @@
     <section id="services" class="services">
         <h2>Meus Serviços</h2>
         <div>
-            <p-carousel [value]="services" [numVisible]="3" [numScroll]="3" [circular]="true" [showIndicators]="false">
+            <p-carousel [value]="services" [numVisible]="3" [numScroll]="3" [circular]="true" [showIndicators]="false" [responsiveOptions]="responsiveOptions">
                 <ng-template let-service pTemplate="item">
                     <article class="card">
                         <div class="card_image">
@@ -44,32 +44,36 @@
     </section>
     <section id="portfolio" class="portfolio">
         <h2>Antes e Depois</h2>
-        <p-carousel [value]="results" [numVisible]="3" [numScroll]="3" [circular]="true" [showIndicators]="false">
-            <ng-template let-result #item>
-                <article class="card">
-                    <img [src]="result.image" alt="Foto da profissional">
-                    <strong>{{ result.title }}</strong>
-                    <p>{{ result.description }}</p>
-                </article>
-            </ng-template>
-        </p-carousel>
+        <div>
+            <p-carousel [value]="results" [numVisible]="3" [numScroll]="3" [circular]="true" [showIndicators]="false" [responsiveOptions]="responsiveOptions">
+                <ng-template let-result #item>
+                    <article class="card">
+                        <img [src]="result.image" alt="Foto da profissional">
+                        <strong>{{ result.title }}</strong>
+                        <p>{{ result.description }}</p>
+                    </article>
+                </ng-template>
+            </p-carousel>
+        </div>
     </section>
     <section id="testimonials" class="testimonials">
         <h2>Depoimentos</h2>
-        <p-carousel [value]="testmonials" [numVisible]="3" [numScroll]="3" [circular]="true" [showIndicators]="false">
-            <ng-template let-testmonial #item>
-                <article class="card">
-                    <p>{{ testmonial.description }}</p>
-                    <div class="customer">
-                        <img src="images/foto_perfil.jpeg" alt="Foto da profissional">
-                        <div>
-                            <strong>{{ testmonial.name }}</strong>
-                            <p>{{ testmonial.procedure }}</p>
+        <div>
+            <p-carousel [value]="testmonials" [numVisible]="3" [numScroll]="3" [circular]="true" [showIndicators]="false" [responsiveOptions]="responsiveOptions">
+                <ng-template let-testmonial #item>
+                    <article class="card">
+                        <p>{{ testmonial.description }}</p>
+                        <div class="customer">
+                            <img [src]="testmonial.avatar" alt="Foto da profissional">
+                            <div>
+                                <strong>{{ testmonial.name }}</strong>
+                                <p>{{ testmonial.procedure }}</p>
+                            </div>
                         </div>
-                    </div>
-                </article>
-            </ng-template>
-        </p-carousel>
+                    </article>
+                </ng-template>
+            </p-carousel>
+        </div>
     </section>
     <section id="contact" class="contact">
         <h2>Agende seu Horário</h2>

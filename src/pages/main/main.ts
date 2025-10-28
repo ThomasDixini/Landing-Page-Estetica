@@ -10,6 +10,19 @@ import { AnimateOnScrollModule } from 'primeng/animateonscroll';
   styleUrl: './main.scss',
 })
 export class Main {
+  responsiveOptions: any[] = [
+    {
+      breakpoint: '1250px',
+      numVisible: 2,
+      numScroll: 1
+    },
+    {
+      breakpoint: '800px',
+      numVisible: 1,
+      numScroll: 1
+    },
+  ];
+
   public services = [
     {
       icon: 'fa-solid fa-spa',
@@ -58,11 +71,17 @@ export class Main {
 
   public testmonials = [
     {
-      avatar: 'images/foto_perfil.jpeg',
+      avatar: 'images/customers/customer_photo-2.jpeg',
       description: '"Procedimento excelente, aplicado por um excelente profissional!"',
       name: 'Thomas Dixini',
       procedure: 'Ventosaterapia'
-    }
+    },
+    {
+      avatar: 'images/customers/customer_photo-1.png',
+      description: '"Design impecável! Minhas sobrancelhas ficaram perfeitamente alinhadas e com um formato incrível. Trabalho feito com muito cuidado e profissionalismo!"',
+      name: 'Maria Aparecida',
+      procedure: 'Design de Sobrancelhas'
+    },
   ]
 
 
