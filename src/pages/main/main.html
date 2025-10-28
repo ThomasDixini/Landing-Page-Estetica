@@ -2,9 +2,11 @@
     <section class="gradient">
         <h1>Realce a sua Beleza Natural</h1>
         <p>Descubra o poder da estética para realçar sua beleza única. Tratamentos personalizados para resultados que você vai amar.</p>
-        <button>Agende sua Avaliação</button>
     </section>
-    <section id="about" class="about">
+    <section 
+        id="about" 
+        class="about" 
+    >
         <h2>Sobre mim</h2>
         <div class="about_content">
             <img src="images/professional_avatar.jpeg" alt="Foto da profissional">
@@ -20,14 +22,13 @@
                     Meu objetivo é transformar o seu dia com tratamentos que
                     valorizam sua beleza natural e promovem equilíbrio para o corpo e a mente.
                 </p>
-                <button>Conheça minha história</button>
             </div>
         </div>
     </section>
     <section id="services" class="services">
         <h2>Meus Serviços</h2>
         <div>
-            <p-carousel [value]="services" [numVisible]="3" [numScroll]="3" [circular]="true" >
+            <p-carousel [value]="services" [numVisible]="3" [numScroll]="3" [circular]="true" [showIndicators]="false">
                 <ng-template let-service pTemplate="item">
                     <article class="card">
                         <div class="card_image">
@@ -35,7 +36,7 @@
                         </div>
                         <strong>{{ service.title }}</strong>
                         <p>{{ service.description }}</p>
-                        <p>Saiba Mais</p>
+                        <p (click)="enviarMensagemWhatsApp()">Saiba Mais</p>
                     </article>
                 </ng-template>
             </p-carousel>
@@ -43,7 +44,7 @@
     </section>
     <section id="portfolio" class="portfolio">
         <h2>Antes e Depois</h2>
-        <p-carousel [value]="results" [numVisible]="3" [numScroll]="3" [circular]="true" >
+        <p-carousel [value]="results" [numVisible]="3" [numScroll]="3" [circular]="true" [showIndicators]="false">
             <ng-template let-result #item>
                 <article class="card">
                     <img [src]="result.image" alt="Foto da profissional">
@@ -55,7 +56,7 @@
     </section>
     <section id="testimonials" class="testimonials">
         <h2>Depoimentos</h2>
-        <p-carousel [value]="testmonials" [numVisible]="3" [numScroll]="3" [circular]="true" >
+        <p-carousel [value]="testmonials" [numVisible]="3" [numScroll]="3" [circular]="true" [showIndicators]="false">
             <ng-template let-testmonial #item>
                 <article class="card">
                     <p>{{ testmonial.description }}</p>
@@ -73,7 +74,7 @@
     <section id="contact" class="contact">
         <h2>Agende seu Horário</h2>
         <p>Clique no botão abaixo para iniciar uma conversa no WhatsApp e agendar seu horário. É rápido e fácil!</p>
-        <button>
+        <button (click)="enviarMensagemWhatsApp()">
             <i class="fa-regular fa-comment"></i>
             <span>Conversar no WhatsApp</span>
         </button>

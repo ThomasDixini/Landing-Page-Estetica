@@ -1,13 +1,13 @@
-import { Component } from '@angular/core';
-import { title } from '@primeuix/themes/aura/card';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { CarouselModule } from 'primeng/carousel';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 
 @Component({
   selector: 'app-main',
-  imports: [CarouselModule, FontAwesomeModule],
+  imports: [CarouselModule, FontAwesomeModule, AnimateOnScrollModule],
   templateUrl: './main.html',
-  styleUrl: './main.scss'
+  styleUrl: './main.scss',
 })
 export class Main {
   public services = [
@@ -64,4 +64,18 @@ export class Main {
       procedure: 'Ventosaterapia'
     }
   ]
+
+
+
+  enviarMensagemWhatsApp(){
+    const number = "5535992468053";
+    const message = `
+      Olá, tudo bem?
+    Estava navegando pelo seu site e me interessei pelos seus procedimentos estéticos.
+    Gostaria de receber mais informações sobre os tratamentos disponíveis e o agendamento.
+    `;
+    const encodedMessage = encodeURIComponent(message);
+    const url = `https://wa.me/${number}?text=${encodedMessage}`;
+    window.open(url, '_blank');
+  }
 }

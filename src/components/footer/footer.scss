@@ -17,5 +17,13 @@ footer {
         i {
             font-size: 2rem;
         }
+
+        a {
+            transition: all 0.2s;
+        }
+
+        a:hover {
+            opacity: 0.5;
+        }
     }
 }
