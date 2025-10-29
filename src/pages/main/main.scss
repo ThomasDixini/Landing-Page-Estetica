@@ -332,7 +332,7 @@ main {
                 height: 200px;
 
                 p {
-                    @include respond(xxs){
+                    @include respond(xs){
                         font-size: 0.8rem;
                         text-align: center;
                     } 
@@ -350,6 +350,8 @@ main {
                     }
 
                     p {
+                        text-align: start;
+                        
                         @include respond(xxs){
                             font-size: 0.6rem;
                         } 
