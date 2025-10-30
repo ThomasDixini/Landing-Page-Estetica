@@ -13,7 +13,7 @@ main {
     h2 {
         margin-bottom: 1.5rem;
         font-size: 3rem;
-        font-family: 'Playfair Display', 'Times New Roman', serif;
+        font-family: 'Playfair Display', 'Georgia', serif;
     }
 
     .gradient {
@@ -36,7 +36,7 @@ main {
 
         h1 {
             font-size: 4.5rem;
-            font-family: 'Playfair Display', 'Times New Roman', serif;
+            font-family: 'Playfair Display', 'Georgia', serif;
             text-align: center;
 
             @include respond(lg){
@@ -188,7 +188,7 @@ main {
 
                 strong {
                     font-size: 1.2rem;
-                    font-family: 'Playfair Display', 'Times New Roman', serif;
+                    font-family: 'Playfair Display', 'Georgia', serif;
                     text-align: center;
                 }
 
