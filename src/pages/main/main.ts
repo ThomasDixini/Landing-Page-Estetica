@@ -1,11 +1,10 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { CarouselModule } from 'primeng/carousel';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 
 @Component({
   selector: 'app-main',
-  imports: [CarouselModule, FontAwesomeModule, AnimateOnScrollModule],
+  imports: [CarouselModule, FontAwesomeModule],
   templateUrl: './main.html',
   styleUrl: './main.scss',
 })

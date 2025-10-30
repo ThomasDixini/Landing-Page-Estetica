@@ -6,12 +6,84 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/png" href="favicon-32x32.png">
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="preload"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  </noscript>
+
+  <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap"
+        as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap"
+          rel="stylesheet">
+  </noscript>
+
+  <link rel="preload"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+    as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  </noscript>
+
+  <link rel="preload" href="styles.css" as="style" onload="this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="styles.css"></noscript>
+
+
+  <style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    button {
+      border-style: none;
+      font-weight: bold;
+      font-family: 'Inter', sans-serif;
+    }
+    html {
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+
+    body {
+        background-color: #F1F1F1;
+        font-family: 'Inter', sans-serif;
+        color: #010101;
+    }
+
+    @font-face {
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      font-display: swap;
+      src: url('fonts/fa-solid-900.woff2') format('woff2');
+    }
+
+    @font-face {
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 400;
+      font-display: swap;
+      src: url('fonts/fa-regular-400.woff2') format('woff2');
+    }
+
+    @font-face {
+      font-family: 'Font Awesome 6 Brands';
+      font-weight: 400;
+      font-display: swap;
+      src: url('fonts/fa-brands-400.woff2') format('woff2');
+    }
+  </style>
 </head>
 <body>
   <app-root></app-root>

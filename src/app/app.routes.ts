@@ -1,9 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { Main } from '../pages/main/main';
 
 export const routes: Routes = [
-  { path: '', component: Main }
+  { path: '', loadComponent: () => import('../pages/main/main').then(m => m.Main) }
 ];
 
 @NgModule({

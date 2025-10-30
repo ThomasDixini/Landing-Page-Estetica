@@ -1,11 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-
-$primary_font: 'Inter', sans-serif;
+$primary_font: 'Inter', Arial, sans-serif;
 
 $black100: #000000;
 $black80: #010101;
@@ -35,26 +29,4 @@ $breakpoints: (
   @media (max-width: map-get($breakpoints, $size)) {
     @content;
   }
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    button {
-        border-style: none;
-        font-weight: bold;
-        font-family: $primary_font;
-    }
-}
-
-html {
-  padding: 0;
-  scroll-behavior: smooth;
-}
-
-body {
-    background-color: $white90;
-    font-family: $primary_font;
-    color: $black80;
 }
