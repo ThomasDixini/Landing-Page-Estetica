@@ -326,8 +326,12 @@ main {
                 height: 200px;
 
                 p {
-                    @include respond(xs){
+                    @include respond(sm){
                         font-size: 0.8rem;
+                        text-align: center;
+                    } 
+                    @include respond(xxs){
+                        font-size: 0.6rem;
                         text-align: center;
                     } 
                 }
@@ -340,6 +344,7 @@ main {
                     strong {
                         @include respond(xxs){
                             font-size: 0.7rem;
+                            white-space: nowrap;
                         }
                     }
 
@@ -347,7 +352,7 @@ main {
                         text-align: start;
                         
                         @include respond(xxs){
-                            font-size: 0.6rem;
+                            font-size: 0.7rem;
                         } 
                     }
 
