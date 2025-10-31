@@ -14,6 +14,10 @@ footer {
 
     p {
         text-align: center;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-family: Arial;
 
         @include respond(xs){
             font-size: 0.8rem;
@@ -27,8 +31,11 @@ footer {
         i {
             font-size: 2rem;
             display: inline-block;
-            width: 2rem; 
+            max-width: 2rem;
+            width: 100%;
             text-align: center;
+            color: black;
+            font-display: swap;
         }
 
         a {

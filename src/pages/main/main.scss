@@ -35,19 +35,12 @@ main {
         }
 
         h1 {
-            font-size: 4.5rem;
-            font-family: 'Playfair Display', 'Georgia', serif;
+            font-size: clamp(2rem, 4vw + 1rem, 4.5rem);
+            font-family: 'Playfair Display', serif;
             text-align: center;
-
-            @include respond(lg){
-                font-size: 3.5rem;
-            }
-            @include respond(sm){
-                font-size: 2.5rem;
-            }
-            @include respond(xs){
-                font-size: 2rem;
-            }
+            font-optical-sizing: auto;
+            font-weight: 600;
+            font-style: normal;
         }
 
         p {
@@ -201,7 +194,7 @@ main {
                 }
 
                 p:last-of-type {
-                    color: $yellow100;
+                    color: darken($yellow100, 25%);
                     font-weight: bold;
                     margin-top: 1rem;
                     cursor: pointer;
@@ -260,6 +253,7 @@ main {
                     height: 400px;
                     width: 100%;
                     border-radius: 32px;
+                    object-fit: cover;
 
                     @include respond(xxs){
                         height: 300px;
@@ -408,7 +402,7 @@ main {
             gap: 1rem;
             font-size: 1.2rem;
             margin: 2rem 0;
-            background-color: $green80;
+            background-color: darken($green80, 10%);
             color: $white100;
             box-shadow: 0 10px 10px $black10;
             cursor: pointer;
